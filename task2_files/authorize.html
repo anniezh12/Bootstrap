@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <title>SPFx Single Sign On Redirect Page</title>
+                <script type="text/javascript" src="./adal.min.js.download"></script>
+                <script type="text/javascript">
+                    var authContext;
+                    var config = {
+                        clientId: 'c58637bb-e2e1-4312-8a00-04b5ffcd3403',
+                        navigateToLoginRequestUrl: true
+                    };
+                    function parseTokenFromUrl()
+                    {
+                        try
+                        {
+                            authContext = new AuthenticationContext(config);
+                            var hashValue = window.location.hash;
+                            if (!hashValue)
+                            {
+                                console.error('window.location.hash is null!');
+                            }
+
+                            authContext.handleWindowCallback();
+                        }
+                        catch (err)
+                        {
+                            console.error(err.message);
+                        }
+                        finally
+                        {
+                            // Attempt to navigate to original page if something fails. This code will only execute on a full page redirect.
+                            if (window.parent === window)
+                            {
+                                if (!authContext)
+                                {
+                                    window.location.href = window.location.origin;
+                                }
+                                else
+                                {
+                                    window.location.href = authContext._getItem(authContext.CONSTANTS.STORAGE.LOGIN_REQUEST) || window.location.origin;
+                                }
+                            }
+                        }
+                    }
+                </script>
+              </head>
+              <body onload="parseTokenFromUrl()">
+              
+            
+        </body></html>
