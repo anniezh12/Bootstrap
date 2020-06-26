@@ -1,0 +1,50 @@
+
+
+#---------------------------Adding Booklet-------------------------------------------------#
+rule "Add BOOKLET-1 Sku"
+  when
+    order.external_tags contains "all_dtc" and not order has any order_items with (order_item.external_order_item_id blank and order_item.sku is "BOOKLET-1")
+  then
+    add 1.0 item to order_items in order
+      set item.sku to "BOOKLET-1"
+    end
+  end
+ end
+
+#--------------------------Routing to facility 82------------------------------------------#
+
+rule "Route orders with SKU B01DE7MQO8 to facility 82"
+ for order_items in order
+  when
+    order_item.sku matches /^(B01DE7MQO8)$/
+  then
+    route order_item to warehouse "4069"/"82" 
+    for order_items in order
+         when
+          order_item.external_order_item_id blank and order_item.sku is "BOOKLET-1"
+         then
+          route order_item to warehouse "4069"/"82"
+         end
+    end
+   end
+ end
+end
+
+#--------------------------Routing to facility 486------------------------------------------#
+
+rule "Route orders with SKU B01DE7MQ66 to facility 486"
+ for order_items in order
+  when
+    order_item.sku matches /^(B01DE7MQ66)$/
+  then
+     route order_item to warehouse "4069"/"486" 
+     for order_items in order
+         when
+          order_item.external_order_item_id blank and order_item.sku is "BOOKLET-1"
+         then
+          route order_item to warehouse "4069"/"486"
+         end
+    end
+  end
+ end
+end
