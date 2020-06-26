@@ -42,5 +42,11 @@ h1,h2,h3 {
     .navbar {
         background-color: rgb(120, 145, 216);
     }
+    .form-background {
+        width:100%;
+        background-color:rgb(208, 220, 253);
+        padding: 20px;
+        display:block;
+    }
    
       
