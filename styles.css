@@ -48,6 +48,10 @@ h1,h2,h3 {
         padding: 20px;
         display:block;
     }
-   
+ .tab-content{
+     border:1px solid #DDD;
+     border-top:none;
+     padding: 10px;
+ }
     
       
