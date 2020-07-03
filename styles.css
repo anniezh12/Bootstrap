@@ -44,11 +44,13 @@ h1,h2,h3 {
     }
     .form-background {
         width:100%;
-        background-color:rgb(208, 220, 253);
+        background-color:rgb(189, 194, 207);
         padding: 20px;
         display:block;
+        
     }
  .tab-content{
+     background-color: #dfe5e9;
      border:1px solid #DDD;
      border-top:none;
      padding: 10px;
