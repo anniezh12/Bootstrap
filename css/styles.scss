@@ -1,12 +1,21 @@
+$color-primary:  rgb(130, 164, 214);
+$color-secondary: #ada4d6;
+$color-pale: #eae9f6;
+$color-mid:  rgb(120, 145, 216);
+$color-dark: #cdc3e7;
+$color-black-transparent: rgba(0, 0, 0, 0.5);
+
+$body-font: "Open Sans", sans-serif;
+$header-font: "Lobster", cursive;
 body {
-    font-family:"Open Sans", sans-serif;
+    font-family:$body-font;
 }
 
 h1,h2,h3 {
-    font-family: "Lobster", cursive;
+    font-family: $header-font;
     }
     h2 {
-        color: #3046C5;
+        color: $color-primary;
     }
 
     h2 {
@@ -19,9 +28,11 @@ h1,h2,h3 {
         padding: 50px;
         
     }
-    header h2 {
-        color:rgb(105, 223, 158);
+    header
+    { h2 {
+        color:$color-pale;
     }
+}
 
     footer {
         background-image: linear-gradient(#88abc7, white);
@@ -30,7 +41,7 @@ h1,h2,h3 {
 
     .jumbotron {
         padding: 30px;
-        background-image: linear-gradient(to right, #8278ad, #a0ccad, #4a2e7eb9);
+        background-image: linear-gradient(to right, $color-secondary, $color-primary, $color-dark);
         color: rgb(251, 251, 251);
         margin: 0px;
     }
@@ -40,7 +51,7 @@ h1,h2,h3 {
         min-height: 200px;
     }
     .navbar {
-        background-color: rgb(120, 145, 216);
+        background-color:$color-mid; 
     }
     .form-background {
         width:100%;
@@ -54,6 +65,12 @@ h1,h2,h3 {
      border:1px solid #DDD;
      border-top:none;
      padding: 10px;
+ }
+
+ #carouselButton{
+     position:absolute;
+     right:0;
+     bottom:0;
  }
     
       

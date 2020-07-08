@@ -12,7 +12,7 @@
         
     <!-- Additional CSS must be placed after Bootstrap CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
 </head>
@@ -72,20 +72,21 @@
             </div>
         </div>
 
-        <!-- 
+        
             <div class="row">
             <div class="col">
                 <h3>Community Partner(s)</h3>
-            #Creating tabs using nav-tabs
+                <a href="abc">Click Me</a>
+            <!--Creating tabs using nav-tabs-->
                 <ul class="nav nav-tabs col-md-8">
-                    <li class="nav-item"><a class="nav-link active" href="#bootstrap" role="tab" data-toggle="tab">Bootstrap</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#" role="tab" data-toggle="tab">Bootstrap</a></li>
                     <li class="nav-item"><a class="nav-link" href="#git" role="tab" data-toggle="tab">Git Out expedition</a></li>
                     <li class="nav-item"><a class="nav-link" href="#mongo" role="tab" data-toggle="tab">Mongo Fly Shop</a></li>
                     <li class="nav-item"><a class="nav-link" href="#node" role="tab" data-toggle="tab">Node Outdoor Apparel</a></li>
                 </ul>
-            #Encapsulate all of the contents in a custom class tab-content 
+            <!--Encapsulate all of the contents in a custom class tab-content -->
                 <div class="col tab-content mb-5 col-md-8">
-            #Encapsulate each set of contents in a class tab-pane and specify their ids
+            <!--Encapsulate each set of contents in a class tab-pane and specify their ids-->
                     <div role="tabpanel" class="tab-pane fade show active" id="bootstrap">
                         <h4>Bootstrap Outfitters <small>Outdoor Gear Specialists</small></h4>
                         <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
@@ -105,41 +106,39 @@
                     </div>
                 </div>    
             </div> 
-        </div> -->
+        </div> 
         <!--Accordion-->
             <div class="row">
-            <div class="col">
-                <h3>Community Partner(s)</h3>
-                     
-            <!--Encapsulate all of the contents in a custom class tab-content-->
-                <div id="accordion">
-            <!--Encapsulate each set of contents in a class card, specify card-header-->
-                    <div class="card">
-                        <div role="tab" class="card-header">
-                            <h4>
-                                <a data-toggle="collapse" data-target="#bootstrap">Bootstrap Outfitters <small>Outdoor Gear Specialists</small> </a>
-                            </h4>
-                            <div class="collapse show" id="bootstrap" data-parent="#accordion">
-                                <div class="card-body ">
-                                     <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
-                                </div>
+            <div class="col ">
+               <h3>Community Partner(s)</h3>
+                <div id="accordion" class="mb-5">
+                    <!--Encapsulate each set of contents in a class card, specify card-header-->
+                        <div class="card mb-3">
+                            <div role="tab" class="card-header">
+                                <h4>
+                                    <a data-toggle="collapse" data-target="#bootstrap">Bootstrap Outfitters <small>Outdoor Gear Specialists</small> </a>
+                                </h4>
+                                <div class="collapse show" id="bootstrap" data-parent="#accordion">
+                                    <div class="card-body ">
+                                        <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
+                                    </div>
+                                </div>    
                             </div>    
-                        </div>    
-                    </div>
-                    <div class="card">
-                        <div role="tab" class="card-header">
-                            <h4>
-                                <a data-toggle="collapse" data-target="#git">Git Out Expeditions <small>Group Adventure Expeditions</small></a>
-                            </h4>
-                            <div class="collapse" id="git" data-parent="#accordion">
-                                <div class="card-body "></div>
-                                     <p class="d-none d-sm-block">Join Git Out Expeditions to explore new horizons with a group of other adventurers!</p>
-                                </div>
-                            </div>    
+                        </div>
+                        <div class="card">
+                            <div role="tab" class="card-header">
+                                <h4>
+                                    <a data-toggle="collapse" data-target="#git">Git Out Expeditions <small>Group Adventure Expeditions</small></a>
+                                </h4>
+                                <div class="collapse" id="git" data-parent="#accordion">
+                                    <div class="card-body ">
+                                        <p class="d-none d-sm-block">Join Git Out Expeditions to explore new horizons with a group of other adventurers!</p>
+                                    </div>
+                                </div>  
+                            </div>      
                         </div>   
-                    </div>    
-                    <div class="card">
-                        <div role="tab" class="card-header">
+                        <div class="card">
+                            <div role="tab" class="card-header">
                             <h4>
                                 <a data-toggle="collapse" data-target="#mongo">Mongo Fly Shop <small>Your Neighborhood Fly Fishing Shop</small></a>
                             </h4>
@@ -161,10 +160,11 @@
                                 </div>
                             </div>    
                         </div>
-                </div>    
+                    </div>    
             </div> 
         </div> 
         <!--End Accordion-->
+    </div>
     </div>
 
     <footer>
